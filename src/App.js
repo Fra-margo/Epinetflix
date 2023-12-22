@@ -1,24 +1,84 @@
-import logo from './logo.svg';
 import './App.css';
+import { createGlobalStyle } from 'styled-components';
+import MyNavbar from './components/MyNavbar';
+import MyHome from './components/MyHome';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    background-color: #221f1f;
+  }
+
+  h2,
+  h4,
+  footer {
+    color: #f5f5f1;
+  }
+
+  .icons {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 18px;
+    color: #f5f5f1;
+  }
+
+  .navbar-nav {
+    font-size: 0.9em;
+  }
+
+  #kids {
+    color: #f5f5f1;
+    font-size: 0.8em;
+  }
+
+  .footer-icon {
+    font-size: 1.3em;
+    margin-left: 1%;
+    margin-right: 1%;
+    color: #838383;
+  }
+
+  .footer-links {
+    text-align: left;
+    font-size: 0.8em;
+  }
+
+  .footer-links p {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: #838383;
+  }
+
+  .footer-links a {
+    color: #838383;
+  }
+
+  .footer-button {
+    color: #838383;
+    border-color: #838383;
+  }
+
+  .copyright {
+    color: #838383;
+    font-size: 0.6em;
+  }
+
+  .col img {
+    transition: transform 0.2s;
+  }
+
+  .col img:hover {
+    transform: scale(1.1);
+  }
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <GlobalStyle />
+      <MyNavbar />
+      <MyHome />
+    </body>
   );
 }
 
