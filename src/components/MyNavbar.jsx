@@ -11,7 +11,7 @@ const MyNavbar = () => {
             <img src="../src/logo.png" style={{ width: '100px', height: '55px' }} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarSupportedContent" />
-          <Navbar.Collapse id="navbarSupportedContent">
+          <Navbar.Collapse id="navbarSupportedContent" className="d-flex justify-content-between">
             <Nav className="mr-auto">
               <Nav.Link href="#">Home</Nav.Link>
               <Nav.Link href="#" active>
@@ -21,10 +21,12 @@ const MyNavbar = () => {
               <Nav.Link href="#">Recently Added</Nav.Link>
               <Nav.Link href="#">My List</Nav.Link>
             </Nav>
-            <FontAwesomeIcon icon={faSearch} className="icons" />
-            <div id="kids">KIDS</div>
-            <FontAwesomeIcon icon={faBell} className="icons" />
-            <FontAwesomeIcon icon={faUser} className="icons" />
+            <div className="d-flex">
+              <FontAwesomeIcon icon={faSearch} className="icons" />
+              <div id="kids">KIDS</div>
+              <FontAwesomeIcon icon={faBell} className="icons" />
+              <FontAwesomeIcon icon={faUser} className="icons" />
+            </div>
           </Navbar.Collapse>
         </Navbar>
     )
