@@ -2,6 +2,11 @@ import './App.css';
 import { createGlobalStyle } from 'styled-components';
 import MyNavbar from './components/MyNavbar';
 import MyHome from './components/MyHome';
+import MyTvShow from './components/MyTvShow';
+import MovieDetails from './components/MovieDetails';
+import NotFound from './components/NotFound';
+import MyFooter from "./components/MyFooter";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -74,11 +79,17 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <body>
+    <BrowserRouter>
       <GlobalStyle />
       <MyNavbar />
-      <MyHome />
-    </body>
+      <Routes>
+        <Route path="/" element={<MyHome />}/>
+        <Route path="/tvshow" element={<MyTvShow />}/>
+        <Route path="/movie-details/:movieId" element={<MovieDetails/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
+      <MyFooter />
+    </BrowserRouter>
   );
 }
 
