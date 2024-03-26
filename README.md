@@ -1,3 +1,9 @@
+This project originated as an exercise in using React and APIs. 
+The task involved creating the Netflix webpage and displaying the catalog of available movies from the API. The movies are organized by sagas, but can also be searched through a search bar. For each movie, users can view reviews written by other users and have the ability to add and modify their own reviews.
+
+Questo progetto nasce come esercitazione nell'utilizzo di React e delle API. 
+L'esercizio consisteva nel creare la pagina web di Netflix e visualizzare il catalogo film disponibile nell'API. I film sono raccolti per saghe, ma possono anche essere ricercati tramite una barra di ricerca. Per ogni film, è possibile visualizzare le recensioni scritte dagli utenti e si ha la possibilità di aggiungere e modificare le proprie recensioni.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
